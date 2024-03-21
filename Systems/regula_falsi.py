@@ -14,13 +14,13 @@ def regula_falsi(f, a, b, ε):
   """
 
   while abs(b - a) > ε:
-    m = (a * f(b) - b * f(a)) / (f(b) - f(a))
-    if f(m) == 0:
-      return m
-    elif f(m) * f(a) < 0:
-      b = m
+    c = (a * f(b) - b * f(a)) / (f(b) - f(a))
+    if f(c) == 0:
+      return c
+    elif f(c) * f(a) < 0:
+      b = c
     else:
-      a = m
+      a = c
   return (a + b) / 2
 
 # דוגמה לשימוש

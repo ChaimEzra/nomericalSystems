@@ -15,13 +15,13 @@ def bisection(f, a, b, max_iter=100):
 
     for i in range(max_iter):
 
-        m = (a + b) / 2
-        if f(m) == 0:
-            return m
-        elif f(m) * f(a) < 0:
-            b = m
+        c = (a + b) / 2
+        if f(c) == 0:
+            return c
+        elif f(c) * f(a) < 0:
+            b = c
         else:
-            a = m
+            a = c
 
     raise RuntimeError("שיטת החצייה לא התכנסה לאחר {} איטרציות".format(max_iter))
 
